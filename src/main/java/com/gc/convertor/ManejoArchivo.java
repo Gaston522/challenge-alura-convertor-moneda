@@ -12,12 +12,6 @@ public class ManejoArchivo {
 
     public void escribirArchivo(){
 
-        LocalDateTime ldt = LocalDateTime.now();
-
-        String fechaHora = " "+ ldt.getDayOfMonth() + "/"
-                + ldt.getDayOfMonth() + "/" + ldt.getYear() + " hora: "
-                + ldt.getHour() + ":" + ldt.getMinute() + ":" + ldt.getSecond();
-
         try {
             FileOutputStream fos = new FileOutputStream("archivo.dat");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
