@@ -1,10 +1,10 @@
 package com.gc.convertor;
 
 import java.io.*;
-import java.text.DecimalFormat;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class ManejoArchivo {
 
@@ -43,11 +43,13 @@ public class ManejoArchivo {
     public void agregarLista(String s) {
 
         LocalDateTime ldt = LocalDateTime.now();
-        DecimalFormat df = new DecimalFormat("##");
+        LocalTime ld = LocalTime.now();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
         String fechaHora = " "+ ldt.getDayOfMonth() + "/"
                 + ldt.getDayOfMonth() + "/" + ldt.getYear() + " hora: "
-                + ldt.getHour() + ":" + df.format(ldt.getMinute()) + ":" + ldt.getSecond();
+                + ld.format(formatter);
 
         lista.add(0, s + fechaHora);
         if (lista.size() > 5)lista.remove(lista.size() - 1);

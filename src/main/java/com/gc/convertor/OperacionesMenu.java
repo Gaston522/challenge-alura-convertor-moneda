@@ -24,7 +24,7 @@ public class OperacionesMenu {
                     Ingrese un número para elegir una conversion:
 
                     1)Dolar >>>> Peso argentino
-                    2)Peso argentino>>>> Dolar
+                    2)Peso argentino >>>> Dolar
                     3)Dolar >>>> Real brasileño
                     4)Real brasileño >>>> Dolar
                     5)Dolar >>>> Peso colombiano
@@ -52,6 +52,7 @@ public class OperacionesMenu {
         } else {
             System.out.println(valorInvalido);
             sc.next();
+            menu();
         }
     }
 
